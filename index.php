@@ -11,8 +11,8 @@ function presentV($m) {
   global $thumbx,$thumby,$fullx,$fully,$picturedir,$dest,$videodir;
 
   $mf = preg_replace('/[.].*$/', '.mp4', $m);
-  prepareP("$picturedir/$m","$dest/t_$mf",$thumbx,$thumby);
-  prepareP("$picturedir/$m","$dest/f_$mf",$fullx,$fully);
+  prepareV("$videodir/$m","$dest/t_$mf",$thumbx,$thumby);
+  prepareV("$videodir/$m","$dest/f_$mf",$fullx,$fully);
   echo '<div class="item"><a href="'.$dest.'/f_'.$mf.'" fullx="'.$fullx.'" fully="'.$fully.'"class="full_view video"><video muted loop autoplay width="'.$thumbx.'" height="'.$thumby.'"><source src="'.$dest.'/t_'.$mf.'" type="video/mp4">Your browser does not support the video tag.</video></a></div>';
 }
 
